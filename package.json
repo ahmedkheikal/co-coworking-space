@@ -1,0 +1,23 @@
+{
+  "name": "co-coworking-space",
+  "version": "1.0.0",
+  "description": "(Academic project) Co-working space management web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedkheikal/co-coworking-space.git"
+  },
+  "author": "Ahmed Heikal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedkheikal/co-coworking-space/issues"
+  },
+  "homepage": "https://github.com/ahmedkheikal/co-coworking-space#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "materialize-css": "^1.0.0"
+  }
+}
