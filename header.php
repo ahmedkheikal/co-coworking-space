@@ -6,6 +6,9 @@ session_start();
 if (basename($_SERVER['REQUEST_URI']) !== 'login')
 if (!authenticated())
 header('location: login');
+else {
+    $user = $_SESSION['auth_user'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,18 +39,20 @@ header('location: login');
         </div>
     </div>
 
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
-            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="<?php echo ROOT ?>">Home</a></li>
-                <li><a href="about">About</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="<?php echo ROOT ?>">Home</a></li>
+                    <li><a href="about">About</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="<?php echo ROOT ?>">Home</a></li>
-        <li><a href="about">About</a></li>
-    </ul>
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="<?php echo ROOT ?>">Home</a></li>
+            <li><a href="about">About</a></li>
+        </ul>
+    </header>

@@ -34,3 +34,29 @@ h5 {
     background: rgba(255, 255, 255, 0.8);
     z-index: 200
 }
+
+.dashboard-navigator {
+    display: none;
+    margin-bottom: 20px;
+    z-index: 0;
+    width: 100%;
+    background: white;
+}
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+    .dashboard-navigator {
+        display: block;
+    }
+}
+.page-footer {
+    padding-top: 0
+}
+.container {
+    min-height: 75vh
+}

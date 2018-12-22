@@ -53,3 +53,8 @@ function login($login, $password, $remember = false)
         return false;
     }
 }
+
+function is_home()
+{
+    return basename($_SERVER['REQUEST_URI']) == '' || basename($_SERVER['REQUEST_URI']) == 'index' || basename($_SERVER['REQUEST_URI']) == 'co-coworking-space';
+}

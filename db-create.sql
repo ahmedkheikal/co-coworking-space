@@ -37,8 +37,10 @@ CREATE TABLE `co_coworking`.`reservations` (
     `user_id` BIGINT(20) NOT NULL ,
     `seat_number` INT NULL DEFAULT NULL ,
     `description` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+    `type` ENUM('individual','group') NOT NULL ,
     `price` INT NOT NULL ,
     PRIMARY KEY (`id`),
+    UNIQUE (`start`, `end`, `room_id`, `seat_number`),
     CONSTRAINT `reservation_user`
     FOREIGN KEY (`user_id`) REFERENCES `customers`(`id`)
         ON DELETE CASCADE
