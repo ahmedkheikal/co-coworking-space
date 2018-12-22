@@ -1,4 +1,4 @@
-<?php include 'private/config.php';
+<?php require_once 'private/config.php';
 include 'private/functions.php'; ?>
 <?php
 session_start();
@@ -21,7 +21,21 @@ header('location: login');
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<body>
+<body style="position: relative">
+    <div id="mainLoader">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav>
         <div class="nav-wrapper">
             <a href="#!" class="brand-logo">Logo</a>

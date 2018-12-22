@@ -11,7 +11,7 @@ CREATE TABLE `co_coworking`.`customers` (
 
 CREATE TABLE `co_coworking`.`employees` (
     `id` BIGINT(20) NOT NULL AUTO_INCREMENT ,
-    `auth_token` TEXT NOT NULL,
+    `auth_token` VARCHAR(255) NULL DEFAULT NULL,
     `first_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
     `last_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
     `phone` VARCHAR(20) NOT NULL ,

@@ -21,3 +21,16 @@ h4 {
 h5 {
     font-size: 18px;
 }
+
+#mainLoader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 45vh;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 200
+}
