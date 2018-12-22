@@ -58,5 +58,5 @@ header, main, footer {
     padding-top: 0
 }
 .container {
-    min-height: 75vh
+    min-height: calc(100vh - 114px)
 }

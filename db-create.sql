@@ -6,7 +6,9 @@ CREATE TABLE `co_coworking`.`customers` (
     `last_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
     `phone` VARCHAR(20) NOT NULL ,
     `email` VARCHAR(255) NULL DEFAULT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE (`phone`),
+    UNIQUE (`email`)
 );
 
 CREATE TABLE `co_coworking`.`employees` (

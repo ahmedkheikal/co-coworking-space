@@ -3,46 +3,34 @@
     <div class="container" style="width: 90%">
         <div class="row">
             <div class="col s12">
-                <h2>Reservations in the next 24 hours</h2>
+                <h2>
+                    Customers
+                    <a href="add-customer" class="btn-floating btn-medium waves-effect waves-light orange"><i class="material-icons">add</i></a>
+                </h2>
                 <table class="striped responsive-table">
                     <thead>
                         <tr>
-                            <th>Room</th>
-                            <th>Reservation Type</th>
-                            <th>Client Name</th>
-                            <th>Client Phone</th>
-                            <th>Start</th>
-                            <th>End</th>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <?php $reservations = mysqli_query($con, "SELECT rooms.name AS roomName, reservations.type, reservations.seat_number, customers.first_name AS customerFirst, customers.last_name AS customerLast, customers.phone AS customerPhone, reservations.start, reservations.end
-                            FROM reservations
-                            LEFT OUTER JOIN customers ON customers.id = reservations.user_id
-                            LEFT OUTER JOIN rooms ON rooms.id = reservations.room_id
-                            WHERE reservations.start > CURRENT_TIMESTAMP()
-                            AND reservations.start < CURRENT_TIMESTAMP() + INTERVAL 24 HOUR") ?>
-                        <?php while ($reservation = mysqli_fetch_assoc($reservations)) : ?>
+                        <?php $customers = mysqli_query($con, "SELECT * FROM customers WHERE 1 ") ?>
+                        <?php while ($customer = mysqli_fetch_assoc($customers)) : ?>
                             <tr>
-                                <td><?php echo $reservation['roomName'] ?></td>
+                                <td><?php echo $customer['id'] ?></td>
+                                <td><?php echo $customer['first_name'] ?></td>
+                                <td><?php echo $customer['last_name'] ?></td>
+                                <td><?php echo $customer['phone'] ?></td>
+                                <td><?php echo $customer['email'] ?></td>
                                 <td>
-                                    <?php echo $reservation['type'] ?>
-                                    <?php if ($reservation['type'] == 'individual'): ?>
-                                        Seat Number: <?php echo $reservation['seat_number'] ?>
-                                    <?php endif; ?>
-                                </td>
-                                <td><?php echo $reservation['customerFirst'] . ' ' . $reservation['customerLast'] ?></td>
-                                <td><?php echo $reservation['customerPhone'] ?></td>
-                                <td>
-                                    <?php $start = new DateTime($reservation['start']) ?>
-                                    <?php echo $start->format('d M Y') ?> <br>
-                                    <strong><?php echo $start->format('h:i A') ?></strong>
-                                </td>
-                                <td>
-                                    <?php $end = new DateTime($reservation['end']) ?>
-                                    <?php echo $end->format('d M Y') ?> <br>
-                                    <strong><?php echo $end->format('h:i A') ?></strong>
+                                    <a href="edit-customer?id=<?php echo $customer['id'] ?>" data-id="<?php echo $customer['id'] ?>" class="btn-floating btn-small waves-effect waves-light cyan"><i class="material-icons">edit</i></a>
+                                    <a href="delete-customer" data-id="<?php echo $customer['id'] ?>" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
