@@ -19,7 +19,9 @@ CREATE TABLE `co_coworking`.`employees` (
     `phone` VARCHAR(20) NOT NULL ,
     `email` VARCHAR(255) NULL DEFAULT NULL,
     `password` VARCHAR(255) NULL DEFAULT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    UNIQUE (`phone`),
+    UNIQUE (`email`)
 );
 
 CREATE TABLE `co_coworking`.`rooms` (
