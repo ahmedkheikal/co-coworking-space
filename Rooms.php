@@ -30,7 +30,7 @@
                                 <td><?php echo $room['type'] ?></td>
                                 <td>
                                     <a href="edit-room?id=<?php echo $room['id'] ?>" data-id="<?php echo $room['id'] ?>" class="btn-floating btn-small waves-effect waves-light cyan"><i class="material-icons">edit</i></a>
-                                    <a href="delete-room" data-id="<?php echo $room['id'] ?>" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                                    <a href="delete-record" data-id="<?php echo $room['id'] ?>" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
@@ -41,3 +41,29 @@
         </div>
     </div>
 <?php include 'footer.php'; ?>
+
+<script type="text/javascript">
+    $('a[href=delete-record]').click(function (e) {
+        e.preventDefault();
+        var conf = confirm('Are you sure that you want to delete this record? ');
+        if (conf)
+        $.ajax({
+            method: 'POST',
+            url: 'api/delete-record',
+            data: {
+                table: 'rooms',
+                id: $(this).attr('data-id')
+            },
+            success: function (data) {
+                if (data.code == '200') {
+                    M.toast({html: data.response})
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1000)
+                } else {
+                    M.toast({html: data.response})
+                }
+            }
+        })
+    })
+</script>
