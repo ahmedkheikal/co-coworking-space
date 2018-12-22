@@ -55,7 +55,7 @@ CREATE TABLE `co_coworking`.`reservations` (
 
 CREATE TABLE `co_coworking`.`pricing` (
     `amount` INT NOT NULL ,
-    `type` ENUM('individual','room') NOT NULL ,
+    `type` ENUM('individual','group') NOT NULL ,
     `room_id` BIGINT(20) NOT NULL ,
     PRIMARY KEY (`type`, `room_id`),
     CONSTRAINT `pricing_room`

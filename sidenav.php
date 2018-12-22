@@ -28,7 +28,7 @@
     }
     .sidebar-userinfo h5 {
         color: white;
-        font-weight: bold;
+        font-weight: bolder;
         margin-left: 70px;
         margin-bottom: 26px;
     }
@@ -48,8 +48,8 @@
     </div>
     <li class="<?php echo is_home() ? 'active' : '' ?>"><a href="<?php echo ROOT ?>">Overview</a></li>
     <li class="<?php echo basename($_SERVER['REQUEST_URI']) == 'Customers' ? 'active' : '' ?>"><a href="Customers">Customers</a></li>
-    <li class="<?php echo basename($_SERVER['REQUEST_URI']) == 'Reservations' ? 'active' : '' ?>"><a href="Reservations">Reservations</a></li>
     <li class="<?php echo basename($_SERVER['REQUEST_URI']) == 'Rooms' ? 'active' : '' ?>"><a href="Rooms">Rooms</a></li>
+    <li class="<?php echo basename($_SERVER['REQUEST_URI']) == 'Reservations' ? 'active' : '' ?>"><a href="Reservations">Reservations</a></li>
     <li class="<?php echo basename($_SERVER['REQUEST_URI']) == 'Pricing' ? 'active' : '' ?>"><a href="Pricing">Pricing</a></li>
 </ul>
 <div class="dashboard-navigator z-depth-1">
