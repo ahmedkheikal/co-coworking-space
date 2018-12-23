@@ -22,6 +22,7 @@ CREATE TABLE `co_coworking`.`employees` (
     PRIMARY KEY (`id`),
     UNIQUE (`phone`),
     UNIQUE (`email`)
+    UNIQUE ('auth_token')
 );
 
 CREATE TABLE `co_coworking`.`rooms` (
