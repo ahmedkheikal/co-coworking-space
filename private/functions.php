@@ -58,3 +58,16 @@ function is_home()
 {
     return basename($_SERVER['REQUEST_URI']) == '' || basename($_SERVER['REQUEST_URI']) == 'index' || basename($_SERVER['REQUEST_URI']) == 'co-coworking-space';
 }
+function calculateReservationPrice($start, $end, $type, $room_id) {
+    global $con;
+    $pricing = mysqli_fetch_assoc(
+        mysqli_query($con, "SELECT * FROM pricing
+            WHERE room_id = '". secure($room_id) ."'
+            AND type = '". secure($type) ."'")
+    );
+
+    $start = new DateTime($start);
+    $end = new DateTime($end);
+    $interval = $end->diff($start);
+    return $pricing['amount'] * $interval->h;
+}

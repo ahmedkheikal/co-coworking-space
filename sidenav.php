@@ -52,8 +52,8 @@
     <li class="<?php echo basename($_SERVER['REQUEST_URI']) == 'Reservations' ? 'active' : '' ?>"><a href="Reservations">Reservations</a></li>
     <li class="<?php echo basename($_SERVER['REQUEST_URI']) == 'Pricing' ? 'active' : '' ?>"><a href="Pricing">Pricing</a></li>
 </ul>
-<div class="dashboard-navigator z-depth-1">
+<!-- <div class="dashboard-navigator z-depth-1">
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-</div>
+</div> -->
 
 <main>

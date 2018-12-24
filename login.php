@@ -12,10 +12,13 @@
         .login_submit, .login_submit * {
             color: white;
         }
+        header, main, footer {
+            padding-left: 0 !important;
+        }
     </style>
     <div class="container mt-5">
         <div class="row">
-            <div class="col s6 offset-s3 z-depth-2 login-form">
+            <div class="col m6 s12 offset-m3 z-depth-2 login-form" style="margin-top: 20px">
                 <form style="display: block" action="api/login" method="post">
                     <h2 style="text-align: center; margin-top: 20px">Login</h2>
                     <div class="input-field">

@@ -42,17 +42,18 @@ else {
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
-                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
+                <a href="#!" class="brand-logo">CO.coworking</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <!-- <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+                <!-- <ul class="right hide-on-med-and-down">
                     <li><a href="<?php echo ROOT ?>">Home</a></li>
                     <li><a href="about">About</a></li>
-                </ul>
+                </ul> -->
             </div>
         </nav>
 
         <ul class="sidenav" id="mobile-nav">
-            <li><a href="<?php echo ROOT ?>">Home</a></li>
-            <li><a href="about">About</a></li>
+            <!-- <li><a href="<?php echo ROOT ?>">Home</a></li>
+            <li><a href="about">About</a></li> -->
         </ul>
     </header>

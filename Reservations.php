@@ -16,11 +16,15 @@
                             <th>Client Phone</th>
                             <th>Start</th>
                             <th>End</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <?php $reservations = mysqli_query($con, "SELECT rooms.name AS roomName, reservations.type, reservations.seat_number, customers.first_name AS customerFirst, customers.last_name AS customerLast, customers.phone AS customerPhone, reservations.start, reservations.end
+                        <?php $reservations = mysqli_query($con, "SELECT rooms.name AS roomName, reservations.type, reservations.seat_number, customers.first_name AS customerFirst, customers.last_name AS customerLast, customers.phone AS customerPhone,
+                            reservations.start, reservations.end, reservations.description, reservations.price, reservations.id
                             FROM reservations
                             LEFT OUTER JOIN customers ON customers.id = reservations.user_id
                             LEFT OUTER JOIN rooms ON rooms.id = reservations.room_id
@@ -47,6 +51,12 @@
                                     <?php $end = new DateTime($reservation['end']) ?>
                                     <?php echo $end->format('d M Y') ?> <br>
                                     <strong><?php echo $end->format('h:i A') ?></strong>
+                                </td>
+                                <td><?php echo $reservation['description'] ?></td>
+                                <td><?php echo $reservation['price'] ?></td>
+                                <td>
+                                    <a href="edit-reservation?id=<?php echo $reservation['id'] ?>" data-id="<?php echo $reservation['id'] ?>" class="btn-floating btn-small waves-effect waves-light cyan"><i class="material-icons">edit</i></a>
+                                    <a href="delete-record" data-id="<?php echo $reservation['id'] ?>" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                         <?php endwhile; ?>
