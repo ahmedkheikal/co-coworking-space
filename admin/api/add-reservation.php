@@ -60,7 +60,7 @@ if (is_post()) {
         '". secure($end_date->format('Y-m-d ')) . ' '. secure($end_time->format('H:i:s')) ."',
         '". secure($room_id) ."',
         '". secure($user['id']) ."',
-        ". secure($seat_number) .",
+        '". secure($seat_number) ."',
         '". secure($description) ."',
         '". secure($type) ."',
         '". secure($price) ."'

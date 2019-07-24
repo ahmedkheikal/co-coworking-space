@@ -67,3 +67,29 @@
         </div>
     </div>
 <?php include 'footer.php'; ?>
+<script type="text/javascript">
+$('a[href=delete-record]').click(function (e) {
+    e.preventDefault();
+    var conf = confirm('Are you sure that you want to delete this record? ');
+    if (conf)
+    $.ajax({
+        method: 'POST',
+        url: 'api/delete-record',
+        data: {
+            table: 'reservations',
+            id: $(this).attr('data-id')
+        },
+        success: function (data) {
+            if (data.code == '200') {
+                M.toast({html: data.response})
+                setTimeout(function () {
+                    location.reload();
+                }, 1000)
+            } else {
+                M.toast({html: data.response})
+            }
+        }
+    })
+})
+
+</script>

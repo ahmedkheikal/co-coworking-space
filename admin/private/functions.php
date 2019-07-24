@@ -46,6 +46,29 @@ function login($login, $password, $remember = false)
         $user = mysqli_fetch_assoc($user_q);
         $auth_token = sha1($user['first_name'] . $user['last_name'] . $user['phone']. rand(999, 9999));
         mysqli_query($con, "UPDATE `employees` SET auth_token = '". secure($auth_token) ."'");
+        $_SESSION['_token'] = $auth_token;
+        if ($remember)
+        setcookie('_token', $auth_token, time() + (10 * 365 * 24 * 60 * 60), '/');
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function loginClient($login, $password, $remember = false)
+{
+    global $con;
+    if (filter_var($login, FILTER_VALIDATE_EMAIL))
+    $user_q = mysqli_query($con, "SELECT * FROM `customers` WHERE email = '". secure($login) ."' and password = '". secure( sha1($password) ) ."'");
+    else
+    $user_q = mysqli_query($con, "SELECT * FROM `customers` WHERE phone = '". secure($login) ."' and password = '". secure( sha1($password) ) ."'");
+    echo mysqli_error($con);
+
+    if (mysqli_num_rows($user_q)) {
+        $user = mysqli_fetch_assoc($user_q);
+        $auth_token = sha1($user['first_name'] . $user['last_name'] . $user['phone']. rand(999, 9999));
+        mysqli_query($con, "UPDATE `employees` SET auth_token = '". secure($auth_token) ."'");
+        $_SESSION['_token'] = $auth_token;
         if ($remember)
         setcookie('_token', $auth_token, time() + (10 * 365 * 24 * 60 * 60), '/');
         return true;

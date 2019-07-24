@@ -1,54 +1,309 @@
-<?php include 'header.php'; ?>
-    <?php include 'sidenav.php'; ?>
-    <div class="container" style="width: 90%">
+<?php include 'header.php' ?>
+<!-- Background Area Start -->
+<section id="slider-container" class="slider-area">
+    <div class="slider-owl owl-theme owl-carousel">
+        <!-- Start Slingle Slide -->
+        <div class="single-slide item" style="background-image: url(img/banner/slider-1.jpg)">
+            <!-- Start Slider Content -->
+            <div class="slider-content-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slide-content-wrapper">
+                                <div class="slide-content">
+                                    <h2>Coworking in the heart </h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
+                                    <a class="banner-btn" href="#" data-text="learn more"><span>Learn more</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Slider Content -->
+        </div>
+        <!-- End Slingle Slide -->
+        <!-- Start Slingle Slide -->
+        <div class="single-slide item" style="background-image: url(img/banner/slider-2.jpg)">
+            <!-- Start Slider Content -->
+            <div class="slider-content-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slide-content-wrapper">
+                                <div class="slide-content">
+                                    <h2>Coworking for winner team </h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
+                                    <a class="banner-btn" href="#" data-text="learn more"><span>Learn more</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Slider Content -->
+        </div>
+        <!-- End Slingle Slide -->
+        <!-- Start Slingle Slide -->
+        <div class="single-slide item" style="background-image: url(img/banner/slider-3.jpg)">
+            <!-- Start Slider Content -->
+            <div class="slider-content-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="slide-content-wrapper">
+                                <div class="slide-content">
+                                    <h2>Coworking in the heart </h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
+                                    <a class="banner-btn" href="#" data-text="learn more"><span>Learn more</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Slider Content -->
+        </div>
+        <!-- End Slingle Slide -->
+    </div>
+</section>
+<!-- Background Area End -->
+<!-- Cowork Start -->
+<section class="cowork-area pt-120 pb-120">
+    <div class="container">
         <div class="row">
-            <div class="col s12">
-                <h2>Reservations in the next 24 hours</h2>
-                <table class="striped responsive-table">
-                    <thead>
-                        <tr>
-                            <th>Room</th>
-                            <th>Reservation Type</th>
-                            <th>Client Name</th>
-                            <th>Client Phone</th>
-                            <th>Start</th>
-                            <th>End</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php $reservations = mysqli_query($con, "SELECT rooms.name AS roomName, reservations.type, reservations.seat_number, customers.first_name AS customerFirst, customers.last_name AS customerLast, customers.phone AS customerPhone, reservations.start, reservations.end
-                            FROM reservations
-                            LEFT OUTER JOIN customers ON customers.id = reservations.user_id
-                            LEFT OUTER JOIN rooms ON rooms.id = reservations.room_id
-                            WHERE reservations.start > CURRENT_TIMESTAMP()
-                            AND reservations.start < CURRENT_TIMESTAMP() + INTERVAL 24 HOUR") ?>
-                        <?php while ($reservation = mysqli_fetch_assoc($reservations)) : ?>
-                            <tr>
-                                <td><?php echo $reservation['roomName'] ?></td>
-                                <td>
-                                    <?php echo $reservation['type'] ?>
-                                    <?php if ($reservation['type'] == 'individual'): ?>
-                                        Seat Number: <?php echo $reservation['seat_number'] ?>
-                                    <?php endif; ?>
-                                </td>
-                                <td><?php echo $reservation['customerFirst'] . ' ' . $reservation['customerLast'] ?></td>
-                                <td><?php echo $reservation['customerPhone'] ?></td>
-                                <td>
-                                    <?php $start = new DateTime($reservation['start']) ?>
-                                    <?php echo $start->format('d M Y') ?> <br>
-                                    <strong><?php echo $start->format('h:i A') ?></strong>
-                                </td>
-                                <td>
-                                    <?php $end = new DateTime($reservation['end']) ?>
-                                    <?php echo $end->format('d M Y') ?> <br>
-                                    <strong><?php echo $end->format('h:i A') ?></strong>
-                                </td>
-                            </tr>
-                        <?php endwhile; ?>
-                    </tbody>
-                </table>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="cowork-content section-title">
+                    <h2>What is Cowork?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiust tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup velit esse cillum dolore eu fugiat nulla. </p>
+                    <a class="banner-btn" href="about.php" data-text="about us"><span>about us</span></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="cowork-img">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="#"><img src="img/banner/slider-1.jpg" alt="cowork"></a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="#"><img src="img/banner/slider-2.jpg" alt="cowork"></a>
+                        </div>
+                        <div class="col-sm-12">
+                            <a href="#"><img src="img/banner/slider-3.jpg" alt="cowork"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</section>
+<!-- Cowork End -->
+<!-- Benefit Start -->
+<section class="benefit-area pb-115 pt-108">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-4 col-md-9 col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-12 benefit-col">
+                <div class="section-title text-left">
+                    <h2>benefits</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-4 col-md-9 col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-12 benefit-col">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-benefit mb-40">
+                            <div class="benefit-icon">
+                                <a href="#"><span class="icon-pencil"></span></a>
+                            </div>
+                            <div class="benefit-content">
+                                <h3><a href="class.html">Central Location</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor in ut labore et dolore magna. </p>
+                            </div>
+                        </div>
+                        <div class="single-benefit hidden-xs">
+                            <div class="benefit-icon">
+                                <a href="#"><span class="icon-lock"></span></a>
+                            </div>
+                            <div class="benefit-content">
+                                <h3><a href="class.html">personal locker</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor in ut labore et dolore magna. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-benefit mb-40">
+                            <div class="benefit-icon">
+                                <a href="#"><span class="icon-presentation"></span></a>
+                            </div>
+                            <div class="benefit-content">
+                                <h3><a href="class.html">Meeting Room</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor in ut labore et dolore magna. </p>
+                            </div>
+                        </div>
+                        <div class="single-benefit hidden-xs">
+                            <div class="benefit-icon">
+                                <a href="#"><span class="icon-video"></span></a>
+                            </div>
+                            <div class="benefit-content">
+                                <h3><a href="class.html">Entertainment</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor in ut labore et dolore magna. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hidden-sm col-xs-12">
+                        <div class="single-benefit mb-40">
+                            <div class="benefit-icon">
+                                <a href="#"><span class="icon-basket"></span></a>
+                            </div>
+                            <div class="benefit-content">
+                                <h3><a href="class.html">lunch everyday</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor in ut labore et dolore magna. </p>
+                            </div>
+                        </div>
+                        <div class="single-benefit hidden-xs">
+                            <div class="benefit-icon">
+                                <a href="#"><span class="icon-dial"></span></a>
+                            </div>
+                            <div class="benefit-content">
+                                <h3><a href="class.html">high speed internet</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor in ut labore et dolore magna. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Class Area End -->
+<!-- Pricing Area Start -->
+<div class="pricing-area pt-108 pb-120 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-title">
+                    <h2>our pricing</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="single-table">
+                    <div class="table-head">
+                        <h4>basic</h4>
+                        <h3><span class="doller">$</span>60<span class="month">/Mo</span></h3>
+                    </div>
+                    <div class="table-body">
+                        <ul>
+                            <li>Email Marketing</li>
+                            <li>Email Builder</li>
+                            <li>Client Testing</li>
+                            <li>Multiple Email Support</li>
+                            <li>Email Read Receipent</li>
+                            <li>5 Users Free</li>
+                        </ul>
+                        <a class="banner-btn" href="#" data-text="get start"><span>get start</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="single-table">
+                    <div class="table-head">
+                        <h4>professional</h4>
+                        <h3><span class="doller">$</span>70<span class="month">/Mo</span></h3>
+                    </div>
+                    <div class="table-body">
+                        <ul>
+                            <li>Email Marketing</li>
+                            <li>Email Builder</li>
+                            <li>Client Testing</li>
+                            <li>Multiple Email Support</li>
+                            <li>Email Read Receipent</li>
+                            <li>5 Users Free</li>
+                        </ul>
+                        <a class="banner-btn" href="#" data-text="get start"><span>get start</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 hidden-sm col-xs-12">
+                <div class="single-table">
+                    <div class="table-head">
+                        <h4>standard</h4>
+                        <h3><span class="doller">$</span>80<span class="month">/Mo</span></h3>
+                    </div>
+                    <div class="table-body">
+                        <ul>
+                            <li>Email Marketing</li>
+                            <li>Email Builder</li>
+                            <li>Client Testing</li>
+                            <li>Multiple Email Support</li>
+                            <li>Email Read Receipent</li>
+                            <li>5 Users Free</li>
+                        </ul>
+                        <a class="banner-btn" href="#" data-text="get start"><span>get start</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pricing Area End -->
+<!-- Event Area Start -->
+<div class="event-area text-center pt-108 pb-115">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="event-content">
+                    <h3>Are you ready to join our next Events?</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiust </p>
+                    <a class="banner-btn" href="#" data-text="join"><span>join</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Event Area End -->
+<!-- Testimonial Area Start -->
+<div class="testimonial-area pt-110 pb-110">
+    <div class="container">
+        <div class="row">
+            <div class="testimonial-owl owl-theme owl-carousel">
+                <div class="col-sm-12">
+                    <div class="single-testimonial">
+                        <div class="client-info">
+                            <div class="client-img">
+                                <img src="img/testimonial/test1.jpg" alt="client">
+                            </div>
+                            <div class="client-title">
+                                <h4>Jackline Milorina</h4>
+                                <h5>HasTech</h5>
+                            </div>
+                        </div>
+                        <div class="client-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit se do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="single-testimonial">
+                        <div class="client-info">
+                            <div class="client-img">
+                                <img src="img/testimonial/test2.jpg" alt="client">
+                            </div>
+                            <div class="client-title">
+                                <h4>Jackline Milorina</h4>
+                                <h5>HasTech</h5>
+                            </div>
+                        </div>
+                        <div class="client-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit se do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial Area End -->
 <?php include 'footer.php'; ?>

@@ -22,7 +22,7 @@ if (is_post()) {
         '". secure($description) ."',
         '". secure($capacity) ."',
         '". secure($type) ."'
-    )");
+    );");
     $new_room_id = mysqli_insert_id($con);
 
     $add_individual_price = mysqli_query($con, "INSERT INTO `pricing`(

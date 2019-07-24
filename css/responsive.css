@@ -1,0 +1,144 @@
+/* Large desktop :1920px. */
+@media (min-width: 1920px) {
+    .client-content p{font-size: 20px}
+    .benefit-content p{font-size: 15px}
+    .single-benefit{margin-right: 30px}
+    .mentor-about-img > img {width: 100%}
+    .col-lg-offset-4.benefit-col {margin-left: 32%}
+}
+
+/* Laptop Device :1366px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .mentor-about-img > img {width: 100%}
+
+
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .cowork-content {margin-right: 38px; margin-top: 0}
+    .benefit-area{ background-position: 30% 50%}
+    .article-left h3::after {right: -10px}
+    .article-right {margin-left: 50px}
+    .single-widget.ml-85 {margin-left: 20px}
+    .single-widget.ml-100 {margin-left: 30px}
+    .benefit-icon {margin-right: 10px}
+    .event-date h2 {font-size: 20px}
+    .event-date h2 span, .event-list-content h2 a {font-size: 15px}
+    .event-date {height: 80px; padding: 14px 0; width: 80px}
+    .event-details{margin-left: 0}
+    .event-img {margin-right: 20px}
+    .event-detail-content h3 {font-size: 14px;line-height: 22px}
+    .event-date-content p {font-size: 12px}
+    .event-list-content {padding: 13px 20px 14px}
+    .event-list-wrapper{margin-right: 0}
+    .event-social ul li {margin-right: 14px}
+    .event-details-bottom > p, .event-social p {font-size: 13px; line-height: 24px}
+    .event-details-bottom h2 {margin-bottom: 20px; margin-top: 10px}
+    .event-details-bottom input {margin-bottom: 15px}
+    .single-post-content h5 {font-size: 13px; line-height: 20px}
+    .single-post-img {margin-right: 10px}
+    .single-post-content p {font-size: 12px;}
+    .info-icon i {margin-right: 8px}
+    .mentor-about-content p.detail {font-size: 15px; line-height: 24px}
+    .mentor-about-content p.detail:last-child {display: none}
+    .event-details-bottom h2 {font-size: 18px; margin-bottom: 20px; margin-top: 20px}
+    
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-menu ul li a {line-height: 86px}
+    .cowork-content {margin-right: 0px; margin-top: 0}
+    .section-title h2 {font-size: 30px; margin-bottom: 15px}
+    .cowork-content p {font-size: 14px; line-height: 24px; margin-bottom: 20px}
+    .benefit-area {background-position: 30% 50%}
+    .client-content p {font-size: 15px; line-height: 26px}
+    .single-widget.ml-85, .single-widget.ml-100 {margin-left: 0px}
+    .single-widget.mr-50, .event-list-wrapper {margin-right: 0}
+    .single-widget p {font-size: 13px}
+    .slide-content h2{font-size: 45px; margin-bottom: 20px}
+    .event-list-content {width: 81%}
+    .event-details, .map-area{margin-top: 50px;}
+    .mentor-about-content p.detail:last-child {display: none}
+    .sticky .logo {padding: 18px 0}
+    .event-img > img{width: 100%; margin-bottom: 20px}
+    .mentor-about-img{ margin-right: 0px}
+    .mentor-about-content p.detail {font-size: 15px; line-height: 25px}
+    .top {min-height: 86px}
+    .event-date {padding: 18px 35px 24px}
+    .event-img > img {margin-bottom: 0px}
+    .event-details {margin-left: 0}
+    
+}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.container {width:300px}
+    .slide-content h2 {font-size: 24px; margin-bottom: 15px}
+    .slide-content p {font-size: 15px; margin-bottom: 30px;}
+    .cowork-content {margin-right: 0px; margin-top: 0px;}
+    .cowork-area, .benefit-area, .pricing-area, .testimonial-area, .mentor-area, .article-area, .fun-area, .event-detail-area, .article--detials-area, .gallery-area {padding-top: 70px; padding-bottom: 70px}
+    .mentor-details-area, .contact-area {padding-top: 70px}
+    .section-title h2 {font-size: 25px; margin-bottom: 20px}
+    .cowork-content p {font-size: 14px; line-height: 25px}
+    .cowork-content, .single-fun{padding-bottom: 50px}
+    .col-md-3:last-child .single-fun{padding-bottom: 0}
+    .benefit-area .col-md-4:last-child .single-benefit, .pricing-area .col-md-4:last-child .single-table, .col-md-6:last-child .single-testimonial, .col-md-3:last-child .single-mentor, .col-md-4:last-child .single-article, .col-md-4:last-child .single-widget{margin-bottom: 0}
+    .single-table, .single-testimonial, .single-mentor, .single-article, .single-widget{margin-bottom: 30px}
+    .event-content h3 {font-size: 25px}
+    .event-content p {font-size: 15px}
+    .client-img {margin-right: 8px}
+    .client-title h4, .article-right p {font-size: 14px}
+    .client-title h5, .footer-bottom p, .single-post-content p {font-size: 13px}
+    .article-left h3::after {right: -10px}
+    .article-right {margin-left: 50px}
+    .single-widget.ml-85, .single-widget.ml-100 {margin-left: 0px}
+    .single-widget.mr-50{margin-right: 0}
+    a.mr-2{margin-right: 1px}
+    a.mb-2{margin-bottom: 1px}
+    .benefit-area {background-position: 50% 50%}
+    .mentor-about-img{ margin-right: 0px}
+    .event-date, .event-list-content {width: 92%; margin: 10px}
+    .sticky .mean-container a.meanmenu-reveal {margin-top: -50px}
+    .event-list-content h2 {line-height: 18px}
+    .event-list-content h2 a {font-size: 16px}
+    .event-img {width: 100%; margin-bottom: 20px; margin-right: 0}
+    .event-img img {width: 100%; margin-right: 0}
+    .article-content {bottom: 15px}
+    .detail-date p {font-size: 18px; margin-bottom: 0}
+    .detail-date p span {font-size: 10px}
+    .detail-date{padding: 5px 5px 0; top: 10px; left: 10px}
+    .article-details-content blockquote {margin-left: 25px}
+    .comment-date {float: left; margin-top: 5px}
+    .comment-img {margin-right: 12px}
+    .single-comment.child {margin-left: 30px}
+    .single-post-content {display: table}
+    .single-post-content h5 {font-size: 15px; line-height: 20px}
+    .comment p{font-size: 15px}
+    .map-area{margin-top: 50px}
+    .col-md-6:first-child .single-info, .mentor-about-img {margin-bottom: 50px}
+    .portfolio.hover-style img, .mentor-about-img > img {width: 100%}
+    .article-right p a {font-size: 14px}
+    .info-content p {font-size: 12px}
+    .info-icon i {margin-right: 5px}
+    .owl-nav div{display: none}
+    .event-details {margin-left: 0}
+    .event-list-wrapper {margin-right: 0}
+    .event-detail-content {overflow: inherit}
+}
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+    .cowork-img .col-sm-6 img, .mentor-img img, .article-img img{width: 100%}
+    a.mr-2{margin-right: 2px}
+    a.mb-2{margin-bottom: 2px}
+    .comment-date {float: right; margin-top: 0px}
+    .main-footer .col-md-4:last-child .single-widget{margin-right: 100px}
+    .event-date, .event-list-content {width: 96%}
+    .info-content p {font-size: 14px}
+    .info-icon i {margin-right: 15px}
+}

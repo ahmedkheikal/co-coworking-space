@@ -1,70 +1,49 @@
-<?php include 'header.php'; ?>
-    <style media="screen">
-        @media (min-width: 480px) {
-            .container {
-                margin-top: 60px;
-            }
-        }
-        .login-form {
-            border-radius: 10px;
-            padding-bottom: 20px !important
-        }
-        .login_submit, .login_submit * {
-            color: white;
-        }
-        header, main, footer {
-            padding-left: 0 !important;
-        }
-    </style>
-    <div class="container mt-5">
+<?php include 'header.php' ?>
+
+<div class="container" style="max-width: 800px">
+    <form class="" action="index.html" method="post">
         <div class="row">
-            <div class="col m6 s12 offset-m3 z-depth-2 login-form" style="margin-top: 20px">
-                <form style="display: block" action="api/login" method="post">
-                    <h2 style="text-align: center; margin-top: 20px">Login</h2>
-                    <div class="input-field">
-                        <input id="login" type="text" class="validate" name="login">
-                        <label for="login" class="">Email or Phone</label>
+            <div class="col-sm-12">
+                <h4 class="form-inline">Date &nbsp;
+                    <div class="form-group">
+                        <input type="radio" name="oneday_multiple" value="1 day" id="oneday">
+                        <label for="oneday">1 day</label>
                     </div>
-                    <div class="input-field">
-                        <input id="password" type="password" class="validate" name="password">
-                        <label for="password" class="">Password</label>
+                    <div class="form-group">
+                        <input type="radio" name="oneday_multiple" value="1 day" id="multipledays">
+                        <label for="multipledays">multiple days</label>
                     </div>
-                    <div class="input-field">
-                        <p style="text-align: center">
-                            <label>
-                                <input type="checkbox" name="remember"/>
-                                <span>Remember Me</span>
-                            </label>
-                        </p>
-                    </div>
-                    <input class="col s4 offset-s4 waves-effect waves-light btn login_submit" type="submit" name="login_submit" value="login">
-                </form>
+                </h4>
+            </div>
+            <div class="multiple-days touch" id="contact-form">
+                <div class="col-md-6">
+                    <label for="start">Start</label>
+                    <input type="date" name="start" id="start" placeholder="Start*">
+                </div>
+                <div class="col-md-6">
+                    <label for="end">End</label>
+                    <input type="date" name="end" id="end" placeholder="End*">
+                </div>
+                <div class="col-md-12">
+                    <label for="type">Type</label>
+                    <select class="" name="type" id="type">
+                        <option selected disabled value="">-- type --</option>
+                        <option value="room">Seat</option>
+                        <option value="individual">Room</option>
+                    </select>
+                    <textarea name="message" id="message" cols="15" rows="4" placeholder="Description / Details"></textarea>
+                </div>
+                <button class="banner-btn" data-text="send"><span>send</span></button>
+                <p class="form-messege">
+                    <?php if (isset($_POST[''])) {
+                    } ?>
+                </p>
             </div>
         </div>
-    </div>
-<?php include 'footer.php'; ?>
+    </form>
+</div>
+<a href="register.php">
+    <button class="banner-btn" data-text="send"><span>Register</span></button>
+</a>
 
-<script type="text/javascript">
-    $('form').submit(function (e) {
-        e.preventDefault();
-        $('#mainLoader').fadeIn('fast');
-        $.ajax({
-            url: 'api/login',
-            method: 'POST',
-            contentType: false,
-            cache: false,
-            processData: false,
-            data: new FormData(this),
-            success: function (data) {
-                console.log(data);
-                if (data.code == '200') {
-                    location.href = '<?php echo ROOT ?>';
-                } else {
-                    $('#mainLoader').fadeOut('fast');
-                    alert(data.response);
-                }
-
-            }
-        })
-    })
-</script>
+<?php include 'footer.php' ?>
