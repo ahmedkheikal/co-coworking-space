@@ -55,6 +55,12 @@ function login($login, $password, $remember = false)
     }
 }
 
+function logout()
+{
+    setcookie('_token', $auth_token, time() - (10 * 365 * 24 * 60 * 60), '/');
+    session_destroy();
+}
+
 function loginClient($login, $password, $remember = false)
 {
     global $con;

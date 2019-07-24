@@ -96,7 +96,7 @@
                        <div class="event-details ml-15">
                             <div class="event-details-top">
                                 <div class="event-img">
-                                    <img src="img/event/event.jpg" alt="event">
+                                    <img src="img/safe_image (1).jpeg" alt="event">
                                 </div>
                                 <div class="event-detail-content">
                                     <h3>There are many variations otal Making it look like.</h3>
@@ -131,26 +131,6 @@
                             </div>
                             <div class="event-details-bottom">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repr in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                <h2>Joint This Events</h2>
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <input type="text" name="name" id="name" placeholder="Firsh Name*">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" name="last" id="last" placeholder="Last Name*">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" name="phone" id="phone" placeholder="Phone Number*">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" name="email" id="email" placeholder="Mail*">
-                                        </div>
-                                        <div class="col-md-12">
-                                            <a class="banner-btn" href="#" data-text="join"><span>join</span></a>
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                        </div>
                    </div>

@@ -50,6 +50,7 @@
         </div>
         <br>
     </form>
+    <a href="login.php">login</a>
 </div>
 
 <?php include 'footer.php' ?>

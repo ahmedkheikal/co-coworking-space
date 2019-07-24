@@ -56,6 +56,14 @@ require_once 'admin/private/functions.php';
                                             <li><a href="about.php">About us</a></li>
                                             <li><a href="events.php">events</a></li>
                                             <li><a href="reserve.php">reserve your seat</a></li>
+                                            <?php if (authenticated()): ?>
+                                                <li>
+                                                    <?php echo $_SESSION['auth_user']['first_name'] ?>
+                                                </li>
+                                                <li><a href="logout.php">logout</a></li>
+                                            <?php else: ?>
+                                                <li><a href="register.php">login/register</a></li>
+                                            <?php endif; ?>
                                         </ul>
                                     </nav>
                                 </div>

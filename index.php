@@ -13,7 +13,6 @@
                                 <div class="slide-content">
                                     <h2>Coworking in the heart </h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod </p>
-                                    <a class="banner-btn" href="#" data-text="learn more"><span>Learn more</span></a>
                                 </div>
                             </div>
                         </div>
@@ -203,7 +202,6 @@
                             <li>Email Read Receipent</li>
                             <li>5 Users Free</li>
                         </ul>
-                        <a class="banner-btn" href="#" data-text="get start"><span>get start</span></a>
                     </div>
                 </div>
             </div>
@@ -222,7 +220,6 @@
                             <li>Email Read Receipent</li>
                             <li>5 Users Free</li>
                         </ul>
-                        <a class="banner-btn" href="#" data-text="get start"><span>get start</span></a>
                     </div>
                 </div>
             </div>
@@ -241,7 +238,6 @@
                             <li>Email Read Receipent</li>
                             <li>5 Users Free</li>
                         </ul>
-                        <a class="banner-btn" href="#" data-text="get start"><span>get start</span></a>
                     </div>
                 </div>
             </div>
@@ -257,7 +253,7 @@
                 <div class="event-content">
                     <h3>Are you ready to join our next Events?</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiust </p>
-                    <a class="banner-btn" href="#" data-text="join"><span>join</span></a>
+                    <a class="banner-btn" href="events.php" data-text="join"><span>join</span></a>
                 </div>
             </div>
         </div>
@@ -265,45 +261,6 @@
 </div>
 <!-- Event Area End -->
 <!-- Testimonial Area Start -->
-<div class="testimonial-area pt-110 pb-110">
-    <div class="container">
-        <div class="row">
-            <div class="testimonial-owl owl-theme owl-carousel">
-                <div class="col-sm-12">
-                    <div class="single-testimonial">
-                        <div class="client-info">
-                            <div class="client-img">
-                                <img src="img/testimonial/test1.jpg" alt="client">
-                            </div>
-                            <div class="client-title">
-                                <h4>Jackline Milorina</h4>
-                                <h5>HasTech</h5>
-                            </div>
-                        </div>
-                        <div class="client-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit se do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="single-testimonial">
-                        <div class="client-info">
-                            <div class="client-img">
-                                <img src="img/testimonial/test2.jpg" alt="client">
-                            </div>
-                            <div class="client-title">
-                                <h4>Jackline Milorina</h4>
-                                <h5>HasTech</h5>
-                            </div>
-                        </div>
-                        <div class="client-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit se do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- Testimonial Area End -->
 <?php include 'footer.php'; ?>

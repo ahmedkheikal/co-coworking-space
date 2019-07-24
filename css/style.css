@@ -208,7 +208,7 @@ textarea {
     transition: all 0.5s ease-out 0s;
 }
 .banner-area {
-  background: rgba(0, 0, 0, 0) url("../img/banner/article.jpg") no-repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("../img/banner/slider-1.jpg") no-repeat scroll center center / cover ;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -2061,7 +2061,7 @@ textarea {
 /*  13. Fun CSS
 /*----------------------------------------*/
 .fun-area {
-    background: rgba(0, 0, 0, 0) url("../img/banner/fun.jpg") no-repeat fixed center center / cover ;
+    background: rgba(0, 0, 0, 0) url("../img/banner/slider-3.jpg") no-repeat fixed center center / cover ;
     padding: 112px 0 116px;
 }
 .single-fun h3{

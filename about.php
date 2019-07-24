@@ -1,4 +1,11 @@
 <?php include 'header.php' ?>
+<style media="screen">
+    .mentor-img img {
+        height: 193px;
+        width: 193px;
+        object-fit: cover;
+    }
+</style>
 		<!-- Banner Area Start -->
 		<div class="banner-area-wrapper">
             <div class="banner-area text-center">
@@ -42,10 +49,10 @@
                                    <a href="#"><img src="img/banner/slider-1.jpg" alt="cowork"></a>
                                 </div>
                                 <div class="col-sm-6">
-                                   <a href="#"><img src="img/co-worker/coworker2.jpg" alt="cowork"></a>
+                                   <a href="#"><img src="img/banner/slider-3.jpg" alt="cowork"></a>
                                 </div>
                                 <div class="col-sm-12">
-                                   <a href="#"><img src="img/co-worker/coworker3.jpg" alt="cowork"></a>
+                                   <a href="#"><img src="img/banner/slider-2.jpg" alt="cowork"></a>
                                 </div>
                            </div>
                        </div>
@@ -60,7 +67,9 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-4 col-xs-12">
                         <div class="single-fun">
-                            <h3 class="counter">450</h3>
+                            <h3 class="counter">
+                                <?= mysqli_fetch_assoc(mysqli_query($con,"SELECT COUNT(id) as count FROM customers;"))['count'] ?>
+                            </h3>
                             <p>joined</p>
                         </div>
                     </div>
@@ -101,7 +110,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                         <div class="single-mentor">
                             <div class="mentor-img">
-                                <a href="#"><img src="img/team/member1.jpg" alt="member"></a>
+                                <a href="#"><img src="img/safe_image.jpeg" alt="member"></a>
                                 <div class="mentor-hover">
                                     <h5>Jackline Milorina</h5>
                                     <h6>HasTech</h6>
@@ -118,7 +127,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                         <div class="single-mentor">
                             <div class="mentor-img">
-                                <a href="#"><img src="img/team/member2.jpg" alt="member"></a>
+                                <a href="#"><img src="img/safe_image (1).jpeg" alt="member"></a>
                                 <div class="mentor-hover">
                                     <h5>Jackline Milorina</h5>
                                     <h6>HasTech</h6>
@@ -135,7 +144,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                         <div class="single-mentor">
                             <div class="mentor-img">
-                                <a href="#"><img src="img/team/member3.jpg" alt="member"></a>
+                                <a href="#"><img src="img/safe_image.jpeg" alt="member"></a>
                                 <div class="mentor-hover">
                                     <h5>Jackline Milorina</h5>
                                     <h6>HasTech</h6>
@@ -152,7 +161,7 @@
                     <div class="col-md-3 hidden-sm col-xs-12">
                         <div class="single-mentor">
                             <div class="mentor-img">
-                                <a href="#"><img src="img/team/member4.jpg" alt="member"></a>
+                                <a href="#"><img src="img/safe_image (1).jpeg" alt="member"></a>
                                 <div class="mentor-hover">
                                     <h5>Jackline Milorina</h5>
                                     <h6>HasTech</h6>
