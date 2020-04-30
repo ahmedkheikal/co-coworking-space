@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ahmedkheikal/co-coworking-space#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "materialize-css": "^1.0.0"
   }
 }
